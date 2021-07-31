@@ -846,6 +846,11 @@ simple-peer@^9.11.0:
     randombytes "^2.1.0"
     readable-stream "^3.6.0"
 
+skoy@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/skoy/-/skoy-0.3.1.tgz#5877291b1def70e6ef9097b03b295246737badc6"
+  integrity sha512-PvhwX1BldUDUKeWmN/jt4JJdb8vZ2MC+U+j04dGRTxlSaj6IcDBaBonBOzW/f2q5rn3yirsTwFuo1o5U4Gce6w==
+
 source-map-js@^0.6.2:
   version "0.6.2"
   resolved "https://registry.yarnpkg.com/source-map-js/-/source-map-js-0.6.2.tgz#0bb5de631b41cfbda6cfba8bd05a80efdfd2385e"

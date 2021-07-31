@@ -113,6 +113,7 @@ import { computed, defineComponent, onUpdated, reactive, ref } from "vue";
 import { sharedMessages } from "./doc";
 import { lang, langIsSet } from "./params";
 import { langs } from "./langs";
+import Skoy from "skoy"
 
 declare var webkitSpeechRecognition: typeof SpeechRecognition;
 
@@ -164,9 +165,9 @@ export default defineComponent({
       }
     };
     const login = async () => {
-      localStorage.MISHEARD_NAME = name.value = await ask(
+      localStorage.MISHEARD_NAME = name.value = Skoy.convert(await ask(
         "Say your name out loud"
-      );
+      ));
     };
     const changeName = async () => {
       localStorage.MISHEARD_NAME = name.value = "";
@@ -187,7 +188,7 @@ export default defineComponent({
         if (finalTranscript) {
           sharedMessages.push([
             {
-              text: finalTranscript,
+              text: Skoy.convert(finalTranscript),
               name: name.value,
               createdAt: new Date().toJSON(),
             },
